@@ -1,0 +1,25 @@
+{
+  "name": "dnode-test",
+  "version": "0.0.0",
+  "description": "Testing dnode with sock.",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikl/dnode-test.git"
+  },
+  "author": "Mikkel Hoegh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikl/dnode-test/issues"
+  },
+  "dependencies": {
+    "browserify": "~2.20.0",
+    "domready": "~0.2.11",
+    "ecstatic": "~0.4.5",
+    "dnode": "~1.0.5",
+    "shoe": "0.0.11"
+  }
+}
