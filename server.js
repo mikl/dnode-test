@@ -36,6 +36,10 @@ sock.on('end', function () {
     console.log('end event on sock');
 });
 
+sock.on('log', function (severity, msg) {
+    console.log(severity + ': ' + msg);
+});
+
 sock.install(server, '/dnode');
 
 console.log('dnode server ready');
