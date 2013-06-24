@@ -16,6 +16,26 @@ var sock = shoe(function (stream) {
             cb(res);
         }
     });
+
+    d.on('ready', function () {
+        console.log('ready event on dnode');
+    });
+    
+    d.on('end', function () {
+        console.log('end event on dnode');
+    });
+
+    stream.on('end', function () {
+        console.log('end event on stream');
+    });
+
     d.pipe(stream).pipe(d);
 });
+
+sock.on('end', function () {
+    console.log('end event on sock');
+});
+
 sock.install(server, '/dnode');
+
+console.log('dnode server ready');
